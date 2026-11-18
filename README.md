@@ -22,8 +22,8 @@ train/test split (1,409 test customers).
 - These are associations, not proven causes. Fiber customers also pay
   higher monthly charges, so price and service type are tangled together.
 
-![Churn by contract](images/churn_by_contract.png)
-![SHAP summary](images/shap_summary.png)
+![Churn by contract](churn_by_contract.png)
+![SHAP summary](shap_summary.png)
 
 ## Models
 Same preprocessing pipeline for all (scaling + one-hot encoding), 5-fold CV.
@@ -37,7 +37,7 @@ Same preprocessing pipeline for all (scaling + one-hot encoding), 5-fold CV.
 All three tie on AUC, so I chose **Logistic Regression** as the simplest
 and most explainable model.
 
-![ROC curves](images/roc_curves.png)
+![ROC curves](roc_curves.png)
 
 ## Business threshold
 Assumptions (illustrative, not real company data): a retention offer costs
@@ -54,7 +54,7 @@ Savings stay high between roughly 0.6 and 0.75, so I use 0.7 rather than
 the sharp peak. The threshold was tuned on the test set, so the savings
 are slightly optimistic.
 
-![Net savings by threshold](images/savings_curve.png)
+![Net savings by threshold](savings_curve.png)
 
 ## Risk segments (test set)
 
